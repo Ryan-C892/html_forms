@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Form</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <section>
+            <div class="top-bar">
+                <div class="account-container">
+                    <div class="account-column">
+                        <div>Already have an Intuit account?</div>
+                        <a id="link" href="#">I forgot my User ID or Password</a>
+                    </div>
+                    <div class="account-column">
+                        <button id="sign-in" class="account-button">
+                            <span class="icon"></span>
+                            Sign In
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <header id="header">
+                <a id="logo" href="#" aria-label="intuit"></a>
+            </header>
+            <section class="main-container">
+                <header class="logo-button-container">
+                    <ul class="logo-list">
+                        <li>
+                            <span id="logo-1" class="logo-icon"></span>
+                            <a id="link-1" class="logo-link" href="#"></a>
+                        </li>
+                        <li>
+                            <span id="logo-2" class="logo-icon"></span>
+                            <a id="link-2" class="logo-link" href="#"></a>
+                        </li>
+                        <li>
+                            <span id="logo-3" class="logo-icon"></span>
+                            <a id="link-3" class="logo-link" href="#"></a>
+                        </li>
+                    </ul>
+                </header>
+                <section id="form-container">
+                    <section id="sign-up">
+                        <header class="sign-up-header">
+                            <span class="sign-up-title">Create an Intuit account</span>
+                            <span class="sign-up-info">
+                                <div>
+                                    One account for everything Intuit, including Mint.
+                                    <a class="learn-more" id="link">Learn more</a>
+                                </div>
+                            </span>
+                        </header>
+                        <form id="form" action="#" method="post">
+                            <fieldset id="email">
+                                <label for="email">Email address</label>
+                                <div class="input-container" data-error="Please enter a valid email address.">
+                                    <input id="email" type="email" name="email-address" autofocus="" max-length="100" autocomplete="off" onblur="validate()" oninput="success()" required>
+                                    <span id="email-status" class="status" aria-live="assertive" role="alert"></span>
+                                    <!--Tooltip-->
+                                    <span id="info-email" class="tooltip" for="email" aria-live="assertive" role="alert">
+                                        <div class="tooltiptext">You'll use this as your user ID</div>
+                                    </span>
+                                </div>
+                                <!--Error-->
+                                <span id="error" class="error" for="email" aria-live="assertive" role="alert">
+                                    Please enter a valid email address.
+                                </span>
+                            </fieldset>
+                            <fieldset id="phone">
+                                <label for="phone">Phone (recommended)</label>
+                                <div class="input-container">
+                                    <input id="phone" type="tel" name="phone" autofocus="" max-length="30" autocomplete="off" oninput="success()" required>
+                                    <!--Tooltip-->
+                                    <span id="info-phone" class="tooltip" for="phone" aria-live="assertive" role="alert">
+                                        <div class="tooltiptext">
+                                            We strongly recommend adding a phone number. This will help verify your account and keep it safe.
+                                        </div>
+                                    </span>
+                                </div>
+                                <span id="phone-warning">Standard call, messaging or data rates may apply.</span>
+                            </fieldset>
+                            <fieldset id="password">
+                                <label for="password">Password</label>
+                                <div class="input-container">
+                                    <input id="password" type="password" name="password" autofocus="" max-length="50" autocomplete="off" oninput="success()" required>
+                                    <span id="password-logo"></span>
+                                    <!--Tooltip-->
+                                    <span id="info-password" class="tooltip" for="phone" aria-live="assertive" role="alert">
+                                        <div class="tooltiptext">
+                                            Create a password you've never used before. This will help verify your account and keep it safe.
+                                        </div>
+                                    </span>
+                                </div>
+                            </fieldset>
+                            <fieldset id="submit">
+                                <div class="input-container">
+                                <button type="submit" name="submit" id="submit-btn">
+                                    <span class="icon"></span>
+                                    Create Account
+                                </button>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <footer class="sign-up-footer">
+                            <span id="terms">
+                                <div class="terms-container">
+                                    By clicking Create Account, you agree to our <br>
+                                    <a id="link" href="#">Terms</a> and have read and acknowledge our 
+                                    <a id="link" href="#">Global Privacy Statement</a>.
+                                </div>
+                            </span>
+                        </footer>
+                    </section>
+                    <section id="privacy">
+                        <span class="terms-text">
+                            Invisible reCAPTCHA by Google 
+                            <a id="link" href="#">Privacy Policy</a>
+                             and 
+                            <a id="link" href="#">Terms of Use</a>.
+                        </span>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-container">
+                <!-- Footer Links -->
+                <div class="footer-links">
+                    <ul>
+                        <li><a class="footer-link" href="#">Legal</a></li>
+                        <li><a class="footer-link" href="#">Privacy</a></li>
+                        <li><a class="footer-link" href="#">Security</a></li>
+                    </ul>
+                </div>
+                <!-- Copyright -->
+                <div id="copyright">
+                    <span id="copy-container">
+                        <span>
+                            &#169; 2021 Intuit, Inc. All rights reserved. Intuit, QuickBooks, QB,
+                            TurboTax, ProConnect and Mint are registered trademarks of Intuit Inc.
+                        </span>
+                        <br>
+                        Terms and conditions, features, support, pricing, and service options subject
+                        to change without notice.
+                    </span>
+                </div>
+            </div>
+            <!-- Privacy Settings -->
+            <div class="privacy-settings">
+                <a id="myBtn">Privacy Settings</a>
+            </div>
+        </footer>
+        <!-- Privacy Modal -->
+        <div id="privacy_modal" style="display: none;">
+            <div class="privacy_modal_container">
+                <div class="privacy_modal_content">
+                    <h1 class="privacy_modal_header">Privacy Settings</h1>
+                    <p class="privacy_modal_subheader">
+                        We provide you with a way to opt out of advertising activities on our websites.
+                    </p>
+                    <hr>
+                    <div class="checkbox_container" for="checkbox">
+                        <input id="checkbox" type="checkbox" autocomplete="off">
+                        <label for="checkbox">Third Party Advertising Vendors</label>
+                    </div>
+                    <p class="checkbox_text">
+                        We leverage outside service providers who assist us with our marketing and advertising activities.
+                        Note: by opting-out of this tracking, you may still see Intuit advertisements, but they may not be 
+                        tailored to your interests.
+                    </p>
+                    <div class="privacy_modal_footer">
+                        <button class="button_left" role="button">Dismiss</button>
+                        <button id="consent_submit" class="button_right" role="button">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- JS -->
+        <script src="main.js"></script>
+    </body>
+</html>
